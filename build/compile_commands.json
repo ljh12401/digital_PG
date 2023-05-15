@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/lkh12401/Documents/GitHub/digital_PG/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/digital_PG.dir/main.cpp.o -c /home/lkh12401/Documents/GitHub/digital_PG/main.cpp",
+  "file": "/home/lkh12401/Documents/GitHub/digital_PG/main.cpp",
+  "output": "CMakeFiles/digital_PG.dir/main.cpp.o"
+}
+]
