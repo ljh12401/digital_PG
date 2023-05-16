@@ -527,3 +527,119 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/local/lib/cmake/Ceres/CeresConfig.cmake:183 (find_dependency)"
+      - "CMakeLists.txt:17 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-pLWUHY"
+      binary: "/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-pLWUHY"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/local/lib/cmake/Ceres"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: /home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-pLWUHY
+        
+        Run Build Command(s):/snap/cmake/1288/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_779d2/fast && /usr/bin/make  -f CMakeFiles/cmTC_779d2.dir/build.make CMakeFiles/cmTC_779d2.dir/build
+        make[1]: Entering directory '/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-pLWUHY'
+        Building C object CMakeFiles/cmTC_779d2.dir/src.c.o
+        /usr/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_779d2.dir/src.c.o -c /home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-pLWUHY/src.c
+        Linking C executable cmTC_779d2
+        /snap/cmake/1288/bin/cmake -E cmake_link_script CMakeFiles/cmTC_779d2.dir/link.txt --verbose=1
+        /usr/bin/gcc -rdynamic CMakeFiles/cmTC_779d2.dir/src.c.o -o cmTC_779d2 
+        /usr/bin/ld: CMakeFiles/cmTC_779d2.dir/src.c.o: in function `main':
+        src.c:(.text+0x46): undefined reference to `pthread_create'
+        /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+        /usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+        /usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+        collect2: error: ld returned 1 exit status
+        make[1]: *** [CMakeFiles/cmTC_779d2.dir/build.make:99: cmTC_779d2] Error 1
+        make[1]: Leaving directory '/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-pLWUHY'
+        make: *** [Makefile:127: cmTC_779d2/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/local/lib/cmake/Ceres/CeresConfig.cmake:183 (find_dependency)"
+      - "CMakeLists.txt:17 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-MeOvUZ"
+      binary: "/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-MeOvUZ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/local/lib/cmake/Ceres"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: /home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-MeOvUZ
+        
+        Run Build Command(s):/snap/cmake/1288/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c9a50/fast && /usr/bin/make  -f CMakeFiles/cmTC_c9a50.dir/build.make CMakeFiles/cmTC_c9a50.dir/build
+        make[1]: Entering directory '/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-MeOvUZ'
+        Building C object CMakeFiles/cmTC_c9a50.dir/CheckFunctionExists.c.o
+        /usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_c9a50.dir/CheckFunctionExists.c.o -c /home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-MeOvUZ/CheckFunctionExists.c
+        Linking C executable cmTC_c9a50
+        /snap/cmake/1288/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9a50.dir/link.txt --verbose=1
+        /usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_c9a50.dir/CheckFunctionExists.c.o -o cmTC_c9a50  -lpthreads 
+        /usr/bin/ld: cannot find -lpthreads
+        collect2: error: ld returned 1 exit status
+        make[1]: *** [CMakeFiles/cmTC_c9a50.dir/build.make:99: cmTC_c9a50] Error 1
+        make[1]: Leaving directory '/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-MeOvUZ'
+        make: *** [Makefile:127: cmTC_c9a50/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "/snap/cmake/1288/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/local/lib/cmake/Ceres/CeresConfig.cmake:183 (find_dependency)"
+      - "CMakeLists.txt:17 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-sUCsgW"
+      binary: "/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-sUCsgW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/local/lib/cmake/Ceres"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: /home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-sUCsgW
+        
+        Run Build Command(s):/snap/cmake/1288/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_be5c8/fast && /usr/bin/make  -f CMakeFiles/cmTC_be5c8.dir/build.make CMakeFiles/cmTC_be5c8.dir/build
+        make[1]: Entering directory '/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-sUCsgW'
+        Building C object CMakeFiles/cmTC_be5c8.dir/CheckFunctionExists.c.o
+        /usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_be5c8.dir/CheckFunctionExists.c.o -c /home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-sUCsgW/CheckFunctionExists.c
+        Linking C executable cmTC_be5c8
+        /snap/cmake/1288/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be5c8.dir/link.txt --verbose=1
+        /usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_be5c8.dir/CheckFunctionExists.c.o -o cmTC_be5c8  -lpthread 
+        make[1]: Leaving directory '/home/lkh12401/Documents/GitHub/digital_PG/build/CMakeFiles/CMakeScratch/TryCompile-sUCsgW'
+        
+      exitCode: 0
+...
